@@ -6,6 +6,7 @@ Repositório do curso JavaScript avançado (módulos [I][curso1], [II][curso2] e
 O objetivo desse curso é apresentar os novos recursos do ECMAScript 2015, algumas técnicas mais avançadas e também padrões de projeto utilizados em JavaScript.
 
 #### Definição de classes
+
 JavaScript é uma linguagem que permite o desenvolvimento seguindo 3 paradigmas de programação: Estruturada, Funcional e Orientada a Objetos.
 
 Porém o uso de Orientação a Objetos na linguagem era possível através do uso de `prototype` e essa escrita era considerada um pouco verbosa e complexa por muitas pessoas. Com isso uma das novidades a versão 6 do ECMAScript, o `ES2015`, foi uma nova sintaxe para definição de classes.
@@ -60,6 +61,8 @@ class Pessoa {
 }
 ```
 
+#### Variáveis com escopo de bloco
+
 Outra novidade do ES2015 foi a inclusão da keyword `let` para definir variáveis com escopo de bloco e validação para que a mesma variável não seja criada mais de uma vez. Antes disso a declaração de variáveis utilizando `var` tinha escopo global ou de função. Exemplo:
 
 ```javascript
@@ -83,6 +86,8 @@ function testeLet() {
     console.log(nome);
 }
 ```
+
+#### Objetos imutáveis
 
 O JavaScript ainda não permite que sejam criadas propriedades/atributos privados, então por convenção utiliza-se o prefixo `_` para indicar propriedades/atributos que são privados. Além disso, uma técnica utilizada para que essas propriedades/atributos passem a ser `imutáveis` é a utilização do método `Object.freeze`. Um exemplo seria:
 
