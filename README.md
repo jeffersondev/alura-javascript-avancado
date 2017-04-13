@@ -13,6 +13,8 @@ O objetivo desse curso é apresentar os novos recursos do ECMAScript 2015, algum
 #### 6. new Date(), string e Array
 #### 7. Spread operator
 #### 8. Arrow functions
+#### 9. Métodos estáticos
+#### 10. Template Strings e interpolação
 
 ---
 
@@ -270,6 +272,47 @@ Porém nesse caso em específico, que temos somente um parâmetro e que o retorn
 let numeros = [1,2,3,4,5,6,7,8,9,10];
 let pares = numeros.filter(num => num % 2 == 0);
 ```
+
+#### 9. Métodos estáticos
+
+Os métodos definidos nas classes são métodos de instância, ou seja, podem ser executados em um objeto daquela classe. Porém é possível também definir métodos que não necessitam de uma instância da classe para que sejam executados, basta definir o método como estático. O código abaixo mostra um exemplo de como definir e executar um método estático.
+
+```javascript
+class DateHelper {
+    constructor() {
+        throw new Error('Esta classe não pode ser instânciada.');
+    }
+
+    //Método estático
+    static dataParaTexto(data) {
+        return `${data.getDate()}/${data.getMonth()+1}/${data.getFullYear()}`;
+    }
+
+    //Método estático
+    static textoParaData(texto) {
+        if(!/^\d{4}-\d{2}-\d{2}$/.test(texto)) {
+            throw new Error('O formato do texto deve ser aaaa-mes-dia');
+        }
+        return new Date(texto.split('-'));
+    }
+}
+
+//Uso
+console.log(DateHelper.dataParaTexto(new Date()));
+```
+
+#### 10. Template Strings e interpolação
+
+Utilizando `ES2015` é possível utilizar a sintaxe de `Template String`. Como podemos ver no código abaixo, quando precisamos que uma string seja interpolada com variáveis não é mais necessário fazer a concatenação utilizando o sinal de `+`, basta utilizar o `Template String` que o valor da variável é colocado na string gerada.
+
+```javascript
+let nome = 'Jefferson';
+let sobrenome = 'Martins de Andrade';
+
+let frase = `${nome} ${sobrenome} é um desenvolvedor!`; //Jefferson Martins de Andrade é um desenvolvedor!
+```
+
+Um ponto importante em relação ao `Template String` é que a string deve ser envolvida com crase ao invés de aspas duplas ou simples.
 
 [curso1]: https://www.alura.com.br/curso-online-javascript-es6-orientacao-a-objetos-parte-1
 [curso2]: https://www.alura.com.br/curso-online-javascript-es6-orientacao-a-objetos-parte-2
