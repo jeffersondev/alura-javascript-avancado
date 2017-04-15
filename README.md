@@ -10,11 +10,12 @@ O objetivo desse curso é apresentar os novos recursos do ECMAScript 2015, algum
 #### 3. Objetos imutáveis
 #### 4. this() e bind()
 #### 5. Evitando percorrer o DOM
-#### 6. new Date(), string e Array
-#### 7. Spread operator
-#### 8. Arrow functions
-#### 9. Métodos estáticos
-#### 10. Template Strings e interpolação
+#### 6. new Date() e string
+#### 7. Array
+#### 8. Spread operator
+#### 9. Arrow functions
+#### 10. Métodos estáticos
+#### 11. Template Strings e interpolação
 
 ---
 
@@ -192,7 +193,7 @@ class ContadorController {
 
 ---
 
-#### 6. new Date(), string e Array
+#### 6. new Date(), string
 
 Temos várias formas de construir um objeto do tipo `Date`, alguns exemplos são:
 
@@ -212,17 +213,33 @@ let data1 = new Date(dataString3.split('-').reverse()); // deixa o parâmetro no
 let data2 = new Date(dataString3.split('-').reverse().join('/')); // deixa o parâmetro no formato '2016/05/17'
 ```
 
+#### 7. Array
+
 Arrays em javascript também possuem uma função muito prática chamada `map()`. Essa função itera sobre todos os elementos do array e aplica a função recebida como parâmetro em todos esses elementos. No exemplo abaixo temos um array de números, nele aplicamos uma função que dobra o valor de todos os números que forem impar.
 
 ```javascript
 let numeros = [3,2,11,20,8,7];
+
 let novosNumeros = numeros.map(numero => numero % 2 ? numero * 2 : numero);
+
 console.log(novosNumeros); // [6, 2, 22, 20, 8, 14]
+```
+
+Outra função que pode ser muito útil é a `reduce()`. A função `reduce()` recebe como parâmetro uma função com dois parâmetros, o primeiro é um acumulador e o segundo é o elemento da iteração atual. O acumulador será o retorno da função `reduce()`, além disso podemos também passar como segundo parâmetro um valor inicial para esse acumulador. O código de exemplo retorna a somatória de todos os elementos do array.
+
+```javascript
+let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+let somatoria = numeros.reduce((total, num) => {
+    return total + num; //somamos o acumulador 'total' com o elemento atual 'num'
+, 0); // inicializamos o acumulador 'total' com o valor '0'
+
+console.log(somatoria); // exibe 55
 ```
 
 ---
 
-#### 7. Spread operator
+#### 8. Spread operator
 
 O `Spread operator` é outra novidade na sintaxe do `ES2015`. Ele é usado para separar os elementos de um array, por exemplo, a função `Array.push()` pode receber 1 ou mais elementos como parâmetro. Utilizando o `Spread operator` é possível passar um outro array que todos os elementos são desmembrados e passados separadamente como parâmetros. Utilizando `ES5` poderia ser feito da seguinte forma:
 
@@ -246,7 +263,7 @@ lista1.push(...lista2);
 
 ---
 
-#### 8. Arrow functions
+#### 9. Arrow functions
 
 `Arrow function` é uma nova sintaxe para simplificar a escrita de código, deixando-o menos verboso. Abaixo temos um exemplo utilizando a função `Array.filter()`, ela recebe uma função como parâmetro e essa função recebe cada um dos elementos do array e deve retornar `true` para que o elemento faça parte do array resultante ou `false` para excluir o elemento do array resultante.
 
@@ -273,7 +290,7 @@ let numeros = [1,2,3,4,5,6,7,8,9,10];
 let pares = numeros.filter(num => num % 2 == 0);
 ```
 
-#### 9. Métodos estáticos
+#### 10. Métodos estáticos
 
 Os métodos definidos nas classes são métodos de instância, ou seja, podem ser executados em um objeto daquela classe. Porém é possível também definir métodos que não necessitam de uma instância da classe para que sejam executados, basta definir o método como estático. O código abaixo mostra um exemplo de como definir e executar um método estático.
 
@@ -301,7 +318,7 @@ class DateHelper {
 console.log(DateHelper.dataParaTexto(new Date()));
 ```
 
-#### 10. Template Strings e interpolação
+#### 11. Template Strings e interpolação
 
 Utilizando `ES2015` é possível utilizar a sintaxe de `Template String`. Como podemos ver no código abaixo, quando precisamos que uma string seja interpolada com variáveis não é mais necessário fazer a concatenação utilizando o sinal de `+`, basta utilizar o `Template String` que o valor da variável é colocado na string gerada.
 
