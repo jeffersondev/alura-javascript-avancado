@@ -1,10 +1,19 @@
 # alura-javascript-avancado
-Repositório do curso JavaScript avançado (módulos [I][curso1], [II][curso2] e [III][curso3]) do [Alura][alura]
+Curso de JavaScript Avançado do [Alura][alura] - Módulos [I][curso1], [II][curso2] e [III][curso3].
+
+Este repositório contém a minha visão sobre os cursos, as lições aprendidas e o projeto desenvolvido durante os cursos.
+
+## O curso
+
+Neste curso o instrutor [Flavio Henrique de Souza Almeida][flavio] nos ensina como desenvolver utilizando `Orientação a Objetos` com `JavaScript` e aplicar conceitos do padrão `MVC` durante o desenvolvimento de um projeto. Ele nos apresenta diversas novidades incluídas no `JavaScript` a partir do `ECMAScript 2015`, além de algumas dicas e macetes sobre `JavaScript` que podem nos ajudar no dia-a-dia do desenvolvimento.
+
+O projeto resultante desse curso está armazenado nesse repositório e pode ser visualizado [neste link][repo]. Ele está hospedado aqui no GitHub utilizando o [GitHub Pages][github-pages].
 
 ## Lições aprendidas
 
-O objetivo desse curso é apresentar os novos recursos do ECMAScript 2015, algumas técnicas mais avançadas e também padrões de projeto utilizados em JavaScript.
+Na minha visão as principais lições aprendidas estão listadas abaixo.
 
+#### 0. MVC no Front-End
 #### 1. Definição de classes
 #### 2. Variáveis com escopo de bloco
 #### 3. Objetos imutáveis
@@ -16,6 +25,18 @@ O objetivo desse curso é apresentar os novos recursos do ECMAScript 2015, algum
 #### 9. Arrow functions
 #### 10. Métodos estáticos
 #### 11. Template Strings e interpolação
+
+---
+
+#### 0. MVC no Front-End
+
+>MVC é nada mais que um padrão de arquitetura de software, separando sua aplicação em 3 camadas.
+>A camada de interação do usuário(view), a camada de manipulação dos dados(model) e a camada de controle(controller).
+>
+> -- <cite>[Allan Ramos][citacao]</cite>
+
+Minha maior experiência até o momento havia sido com `Java` no Back-End das aplicações e o uso do `MVC` é comum há muito tempo. Quando comecei a estudar sobre o uso desse padrão no Front-End me empolguei bastante, pois isso gera uma boa organização do código, dando maior legibilidade e tornando a manutenção do código muito mais fácil.
+Aplicando esse padrão no desenvolvimento, cada camada fica com uma responsabilidade bem definida. Juntando com a `Orientação a Objetos` fica muito mais fácil saber onde colocar um código para incrementar uma funcionalidade ou até mesmo criar uma nova.
 
 ---
 
@@ -335,3 +356,7 @@ Um ponto importante em relação ao `Template String` é que a string deve ser e
 [curso2]: https://www.alura.com.br/curso-online-javascript-es6-orientacao-a-objetos-parte-2
 [curso3]: https://www.alura.com.br/curso-online-javascript-es6-orientacao-a-objetos-parte-3
 [alura]: https://www.alura.com.br
+[flavio]: https://cursos.alura.com.br/user/flavio-almeida
+[repo]: https://jeffersondev.github.io/alura-javascript-avancado/
+[github-pages]: https://pages.github.com/
+[citacao]: https://tableless.com.br/mvc-afinal-e-o-que/
