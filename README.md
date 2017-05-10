@@ -25,6 +25,7 @@ Na minha visão as principais lições aprendidas estão listadas abaixo.
 #### 9. Arrow functions
 #### 10. Métodos estáticos
 #### 11. Template Strings e interpolação
+#### 12. Herança
 
 ---
 
@@ -311,6 +312,8 @@ let numeros = [1,2,3,4,5,6,7,8,9,10];
 let pares = numeros.filter(num => num % 2 == 0);
 ```
 
+---
+
 #### 10. Métodos estáticos
 
 Os métodos definidos nas classes são métodos de instância, ou seja, podem ser executados em um objeto daquela classe. Porém é possível também definir métodos que não necessitam de uma instância da classe para que sejam executados, basta definir o método como estático. O código abaixo mostra um exemplo de como definir e executar um método estático.
@@ -339,6 +342,8 @@ class DateHelper {
 console.log(DateHelper.dataParaTexto(new Date()));
 ```
 
+---
+
 #### 11. Template Strings e interpolação
 
 Utilizando `ES2015` é possível utilizar a sintaxe de `Template String`. Como podemos ver no código abaixo, quando precisamos que uma string seja interpolada com variáveis não é mais necessário fazer a concatenação utilizando o sinal de `+`, basta utilizar o `Template String` que o valor da variável é colocado na string gerada.
@@ -351,6 +356,19 @@ let frase = `${nome} ${sobrenome} é um desenvolvedor!`; //Jefferson Martins de 
 ```
 
 Um ponto importante em relação ao `Template String` é que a string deve ser envolvida com crase ao invés de aspas duplas ou simples.
+
+---
+
+#### 12. Herança
+
+A utilização do `ES2015` também permite que seja utilizada herança entre as classes criadas com o uso da keyword `extends`. Porém ainda não é possível a criação de classes ou métodos abstratos. Seu uso fica conforme o código abaixo.
+
+```js
+class View { }
+
+class MensagemView extends View { }
+```
+
 
 [alura]: https://www.alura.com.br
 [citacao]: https://tableless.com.br/mvc-afinal-e-o-que/
