@@ -352,11 +352,11 @@ let frase = `${nome} ${sobrenome} é um desenvolvedor!`; //Jefferson Martins de 
 
 Um ponto importante em relação ao `Template String` é que a string deve ser envolvida com crase ao invés de aspas duplas ou simples.
 
+[alura]: https://www.alura.com.br
+[citacao]: https://tableless.com.br/mvc-afinal-e-o-que/
 [curso1]: https://www.alura.com.br/curso-online-javascript-es6-orientacao-a-objetos-parte-1
 [curso2]: https://www.alura.com.br/curso-online-javascript-es6-orientacao-a-objetos-parte-2
 [curso3]: https://www.alura.com.br/curso-online-javascript-es6-orientacao-a-objetos-parte-3
-[alura]: https://www.alura.com.br
 [flavio]: https://cursos.alura.com.br/user/flavio-almeida
-[repo]: https://jeffersondev.github.io/alura-javascript-avancado/
 [github-pages]: https://pages.github.com/
-[citacao]: https://tableless.com.br/mvc-afinal-e-o-que/
+[repo]: https://jeffersondev.github.io/alura-javascript-avancado/
